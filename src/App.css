@@ -1,7 +1,7 @@
 body,
 html {
   margin: 0;
-  height: 100%;
+  /* height: 100%; */
 }
 
 body {
@@ -9,6 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #3e3c3c;
   background: #d197ff;
   background: radial-gradient(
     circle at bottom right,
@@ -17,6 +18,36 @@ body {
     #ffafe6 67%,
     #fff7ba 100%
   );
+  background: linear-gradient(
+    275deg,
+    #ff598d 0%,
+    #d197ff 33%,
+    #ffafe6 67%,
+    #fff7ba 100%
+  );
+}
+
+button.btnRound {
+  border: none;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff7ba;
+  box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+  position: relative;
+  z-index: 2;
+  top: 130px;
+  left: 475px;
+  font-size: 2em;
+  cursor: pointer;
+  transition: ease;
+}
+
+button.btnRound:hover {
+  background-color: #f8f09a;
+  background-color: #fdf194;
+  top: 129px;
+  left: 476px;
 }
 
 table {
@@ -24,8 +55,10 @@ table {
   border-radius: 10px;
   border-collapse: collapse;
   background-color: rgba(255, 255, 255, 0.2);
-  color: #3e3c3c;
   overflow: hidden;
+  margin-bottom: 100px;
+  width: 500px;
+  max-width: 500px;
 }
 
 table * {
@@ -54,7 +87,8 @@ tbody tr:hover {
 }
 
 tbody td {
-  position: relative;
+  /* position: relative; */
+  word-break: break-word;
 }
 
 tbody td:hover:before {

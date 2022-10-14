@@ -3,9 +3,25 @@ import Contacts from "./contacts.json";
 import { useState } from "react";
 
 function App() {
-  const [contactList, setContactList] = useState(Contacts.slice(0, 4));
+  const [contactList, setContactList] = useState(Contacts.slice(0, 5));
+
+  function addRandomContact() {
+    let randomContact = Contacts[Math.floor(Math.random() * Contacts.length)];
+
+    if (contactList.includes(randomContact)) {
+      addRandomContact();
+    } else {
+      let newContacts = [...contactList, randomContact];
+      setContactList(newContacts);
+    }
+  }
+
   return (
     <div className="App">
+      {/* <div className="tableContainer"> */}
+      <button className="btnRound" onClick={() => addRandomContact()}>
+        +
+      </button>
       <table>
         <thead>
           <tr>
@@ -39,6 +55,7 @@ function App() {
           })}
         </tbody>
       </table>
+      {/* </div> */}
     </div>
   );
 }
