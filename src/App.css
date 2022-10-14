@@ -25,7 +25,7 @@ table {
   border-collapse: collapse;
   background-color: rgba(255, 255, 255, 0.2);
   color: #3e3c3c;
-  backdrop-filter: blur(10px);
+  overflow: hidden;
 }
 
 table * {
@@ -47,4 +47,23 @@ thead tr th:last-of-type {
 thead {
   background-color: #ffafe6;
   text-align: left;
+}
+
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+tbody td {
+  position: relative;
+}
+
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.15);
+  z-index: -1;
 }
