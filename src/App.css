@@ -59,10 +59,12 @@ table {
   margin-bottom: 100px;
   width: 500px;
   max-width: 500px;
+  transition: ease;
 }
 
 table * {
   padding: 10px;
+  transition: ease;
 }
 
 tbody img {
@@ -87,7 +89,7 @@ tbody tr:hover {
 }
 
 tbody td {
-  /* position: relative; */
+  position: relative;
   word-break: break-word;
 }
 

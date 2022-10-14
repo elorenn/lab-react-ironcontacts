@@ -11,7 +11,7 @@ function App() {
     if (contactList.includes(randomContact)) {
       addRandomContact();
     } else {
-      let newContacts = [...contactList, randomContact];
+      let newContacts = [randomContact, ...contactList];
       setContactList(newContacts);
     }
   }
