@@ -1,6 +1,50 @@
+body,
+html {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d197ff;
+  background: radial-gradient(
+    circle at bottom right,
+    #ff598d 0%,
+    #d197ff 33%,
+    #ffafe6 67%,
+    #fff7ba 100%
+  );
+}
+
+table {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #3e3c3c;
+  backdrop-filter: blur(10px);
+}
+
+table * {
+  padding: 10px;
+}
+
 tbody img {
   width: 80px;
 }
-th {
-  padding: 10px;
+
+thead tr th:first-of-type {
+  border-radius: 10px 0px 0px 0px;
+}
+
+thead tr th:last-of-type {
+  border-radius: 0px 10px 0px 0px;
+}
+
+thead {
+  background-color: #ffafe6;
+  text-align: left;
 }

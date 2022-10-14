@@ -3,7 +3,7 @@ import Contacts from "./contacts.json";
 import { useState } from "react";
 
 function App() {
-  const [contactList, setContactList] = useState(Contacts.slice(0, 20));
+  const [contactList, setContactList] = useState(Contacts.slice(0, 4));
   return (
     <div className="App">
       <table>
