@@ -1,3 +1,6 @@
 tbody img {
   width: 80px;
 }
+th {
+  padding: 10px;
+}

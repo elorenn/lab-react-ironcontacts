@@ -3,7 +3,7 @@ import Contacts from "./contacts.json";
 import { useState } from "react";
 
 function App() {
-  const [contactList, setContactList] = useState(Contacts.slice(0, 5));
+  const [contactList, setContactList] = useState(Contacts.slice(0, 20));
   return (
     <div className="App">
       <table>
@@ -12,6 +12,12 @@ function App() {
             <th>Picture</th>
             <th>Name</th>
             <th>Popularity</th>
+            <th>
+              Won<br></br>Oscar
+            </th>
+            <th>
+              Won<br></br>Emmy
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -26,6 +32,8 @@ function App() {
                 </td>
                 <td>{contact.name}</td>
                 <td>{contact.popularity.toFixed(2)}</td>
+                <td>{contact.wonOscar ? "🏆" : ""}</td>
+                <td>{contact.wonEmmy && "🏆"}</td>
               </tr>
             );
           })}
