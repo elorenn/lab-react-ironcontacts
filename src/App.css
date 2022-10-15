@@ -82,6 +82,21 @@ thead tr th:last-of-type {
 thead {
   background-color: #ffafe6;
   text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+tbody tr {
+  position: relative;
+  bottom: 0px;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-name: slideIn;
+  animation-duration: 2s;
+}
+
+tbody tr:first-of-type {
+  animation-name: slideIn;
+  animation-duration: 2s;
 }
 
 tbody tr:hover {
@@ -102,4 +117,22 @@ tbody td:hover:before {
   bottom: -9999px;
   background-color: rgba(255, 255, 255, 0.15);
   z-index: -1;
+}
+
+/* @keyframes slideIn {
+  from {
+    bottom: 164px;
+  }
+  to {
+    bottom: 0px;
+  }
+} */
+
+@keyframes slideIn {
+  from {
+    left: 500px;
+  }
+  to {
+    left: 0px;
+  }
 }
