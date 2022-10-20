@@ -18,7 +18,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <div className="tableContainer"> */}
       <button className="btnRound" onClick={() => addRandomContact()}>
         +
       </button>
@@ -26,8 +25,12 @@ function App() {
         <thead>
           <tr>
             <th>Picture</th>
-            <th>Name</th>
-            <th>Popularity</th>
+            <th>
+              Name <span id="upArrow">&#8679;</span>
+            </th>
+            <th>
+              Popularity <span id="downArrow">&#8681;</span>
+            </th>
             <th>
               Won<br></br>Oscar
             </th>
@@ -55,7 +58,6 @@ function App() {
           })}
         </tbody>
       </table>
-      {/* </div> */}
     </div>
   );
 }

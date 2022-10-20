@@ -59,12 +59,11 @@ table {
   margin-bottom: 100px;
   width: 500px;
   max-width: 500px;
-  transition: ease;
 }
 
 table * {
   padding: 10px;
-  transition: ease;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 tbody img {
@@ -89,14 +88,9 @@ thead {
 tbody tr {
   position: relative;
   bottom: 0px;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-  animation-name: slideIn;
-  animation-duration: 2s;
-}
-
-tbody tr:first-of-type {
-  animation-name: slideIn;
-  animation-duration: 2s;
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  /* display: none; */
 }
 
 tbody tr:hover {
@@ -119,16 +113,16 @@ tbody td:hover:before {
   z-index: -1;
 }
 
-/* @keyframes slideIn {
+@keyframes slideDown {
   from {
     bottom: 164px;
   }
   to {
     bottom: 0px;
   }
-} */
+}
 
-@keyframes slideIn {
+@keyframes slideInLeft {
   from {
     left: 500px;
   }
