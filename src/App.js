@@ -16,10 +16,29 @@ function App() {
     }
   }
 
+  function sortByName() {
+    let sortedName = [...contactList];
+    // sortedName.sort((a, b) => (a.name > b.name ? 1 : -1));
+    sortedName.sort((a, b) => a.name.localeCompare(b.name));
+    setContactList(sortedName);
+  }
+
+  function sortByPopularity() {
+    let sortedPop = [...contactList];
+    sortedPop.sort((a, b) => b.popularity - a.popularity);
+    setContactList(sortedPop);
+  }
+
   return (
     <div className="App">
       <button className="btnRound" onClick={() => addRandomContact()}>
         +
+      </button>
+      <button className="btn" onClick={() => sortByName()}>
+        Sort by Name
+      </button>
+      <button className="btn" onClick={() => sortByPopularity()}>
+        Sort by Popularity
       </button>
       <table>
         <thead>
