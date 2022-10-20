@@ -1,11 +1,9 @@
 body,
 html {
   margin: 0;
-  /* height: 100%; */
 }
 
 body {
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,21 +32,27 @@ button.btnRound {
   height: 50px;
   background-color: #fff7ba;
   box-shadow: 0 0 20px rgb(0 0 0 / 10%);
-  position: relative;
+  /* position: relative;
   z-index: 2;
   top: 130px;
-  left: 475px;
+  left: 475px; */
+
+  position: sticky;
+  z-index: 2;
+  top: 17%;
+  left: 63%;
+
   font-size: 2em;
   cursor: pointer;
   transition: ease;
 }
 
-button.btnRound:hover {
+/* button.btnRound:hover {
   background-color: #f8f09a;
   background-color: #fdf194;
   top: 129px;
   left: 476px;
-}
+} */
 
 table {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -62,8 +66,13 @@ table {
 }
 
 table * {
-  padding: 10px;
+  /* padding: 10px; */
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+tr * {
+  padding: 10px;
+  margin: 10px;
 }
 
 tbody img {
@@ -128,5 +137,44 @@ tbody td:hover:before {
   }
   to {
     left: 0px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  tbody img {
+    width: 50px;
+  }
+
+  tr * {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 3vw;
+  }
+
+  table {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  table * {
+    padding: 0;
+  }
+
+  tr * {
+    padding: 0;
+    margin: 10px;
+  }
+
+  button.btnRound {
+    position: fixed;
+    left: unset;
+    top: unset;
+    bottom: 5%;
+    right: 5%;
   }
 }
