@@ -35,7 +35,7 @@ function App() {
     });
     setContactList(filteredContacts);
   }
-g
+
   return (
     <div className="App">
       <button className="btnRound" onClick={() => addRandomContact()}>
