@@ -29,6 +29,13 @@ function App() {
     setContactList(sortedPop);
   }
 
+  function deleteContact(contactId) {
+    const filteredContacts = contactList.filter((contact) => {
+      return contact.id !== contactId;
+    });
+    setContactList(filteredContacts);
+  }
+g
   return (
     <div className="App">
       <button className="btnRound" onClick={() => addRandomContact()}>
@@ -52,12 +59,9 @@ function App() {
               Popularity
               {/* <span id="downArrow">&#8681;</span> */}
             </th>
-            <th>
-              Won<br></br>Oscar
-            </th>
-            <th>
-              Won<br></br>Emmy
-            </th>
+            <th>Won Oscar</th>
+            <th>Won Emmy</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -74,6 +78,14 @@ function App() {
                 <td>{contact.popularity.toFixed(2)}</td>
                 <td>{contact.wonOscar ? "🏆" : ""}</td>
                 <td>{contact.wonEmmy && "🏆"}</td>
+                <td>
+                  <button
+                    className="btn"
+                    onClick={() => deleteContact(contact.id)}
+                  >
+                    Delete
+                  </button>
+                </td>
               </tr>
             );
           })}
