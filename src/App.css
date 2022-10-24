@@ -25,6 +25,24 @@ body {
   );
 }
 
+button.btn {
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  height: 25px;
+  background-color: #fff7ba;
+  box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+  margin: 5px;
+
+  /* position: relative;
+  z-index: 2;
+  top: 130px;
+  left: 475px; */
+
+  cursor: pointer;
+  transition: ease;
+}
+
 button.btnRound {
   border: none;
   border-radius: 100px;
