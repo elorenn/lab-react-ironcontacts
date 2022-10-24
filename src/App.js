@@ -45,10 +45,12 @@ function App() {
           <tr>
             <th>Picture</th>
             <th>
-              Name <span id="upArrow">&#8679;</span>
+              Name
+              {/* <span id="upArrow">&#8679;</span> */}
             </th>
             <th>
-              Popularity <span id="downArrow">&#8681;</span>
+              Popularity
+              {/* <span id="downArrow">&#8681;</span> */}
             </th>
             <th>
               Won<br></br>Oscar
