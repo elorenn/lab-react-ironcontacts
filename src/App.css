@@ -28,8 +28,9 @@ body {
 button.btn {
   border: none;
   border-radius: 5px;
-  width: 150px;
-  height: 25px;
+  /* width: 150px;
+  height: 25px; */
+  padding: 5px 15px;
   background-color: #fff7ba;
   box-shadow: 0 0 20px rgb(0 0 0 / 10%);
   margin: 5px;
@@ -50,16 +51,11 @@ button.btnRound {
   height: 50px;
   background-color: #fff7ba;
   box-shadow: 0 0 20px rgb(0 0 0 / 10%);
-  /* position: relative;
-  z-index: 2;
-  top: 130px;
-  left: 475px; */
-
   position: sticky;
   z-index: 2;
   top: 17%;
-  left: 63%;
-
+  left: 100%;
+  margin-right: -10px;
   font-size: 2em;
   cursor: pointer;
   transition: ease;
@@ -117,7 +113,6 @@ tbody tr {
   bottom: 0px;
   animation-name: slideInLeft;
   animation-duration: 1s;
-  /* display: none; */
 }
 
 tbody tr:hover {
@@ -126,7 +121,7 @@ tbody tr:hover {
 
 tbody td {
   position: relative;
-  word-break: break-word;
+  /* word-break: break-word; */
 }
 
 tbody td:hover:before {
